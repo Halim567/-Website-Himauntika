@@ -17,9 +17,9 @@ export async function load(request: Request) {
     return { form };
 }
 
-async function sleep(ms: number) { //Hanya untuk debugging
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+// async function sleep(ms: number) { //Hanya untuk debugging
+//     return new Promise(resolve => setTimeout(resolve, ms));
+// }
 
 export const actions: Actions = {
     createPesertaPendaftar: async function ({ request }) {
@@ -29,7 +29,7 @@ export const actions: Actions = {
             return fail(400, { formData });
         }
 
-        await sleep(2000); //Hanya untuk debugging
+        // await sleep(2000); //Hanya untuk debugging
 
         try {
             const nim_sudah_digunakan = await prisma.pesertaPendaftar.findUnique({ where: { nim: formData.data.nim } });
