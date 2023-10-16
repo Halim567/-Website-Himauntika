@@ -22,7 +22,7 @@
 <div class="flex h-screen items-center justify-center bg-url bg-no-repeat">
     {#if $message}
         <dialog class="fixed z-10 flex w-full h-screen backdrop-blur-sm items-center justify-center bg-sky-950 bg-opacity-50">
-            <div in:scale={{ duration: 200 }}>
+            <div in:scale={{ duration: 200 }} class="flex items-center justify-center">
                 <Models message={$message}/>
             </div>
         </dialog>
