@@ -1,0 +1,21 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model PesertaPendaftar {
+  id Int @id @default(autoincrement())
+  nama String
+  nim Int @unique 
+  semester Int
+  alasan String
+  create_at DateTime @default(now())
+  update_at DateTime @updatedAt
+}

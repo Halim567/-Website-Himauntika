@@ -1,0 +1,47 @@
+@import url('../node_modules/@fortawesome/fontawesome-free/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply bg-sky-500 text-slate-100 active:scale-95 hover:scale-105 shadow-sm px-2 py-1 rounded transition-all
+}
+
+.btn-danger {
+    @apply bg-amber-500 text-slate-100 active:scale-95 hover:scale-105 shadow-sm px-2 py-1 rounded transition-all
+}
+
+.input {
+    @apply border-b outline-none bg-transparent px-1
+}
+
+.bg-url {
+    background-image: url('lib/assets/images/IMG_8277.jpg');
+    background-size: cover;
+    background-position: 0 -55rem;
+}
+
+.backdrop-blur-own {
+    backdrop-filter: blur(50px);
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+.card-ketua {
+    background-image: url('lib/assets/images/dn-adit.png');
+    background-size: cover;
+}
+
+.card-wakil {
+    background-image: url('lib/assets/images/jawir.png');
+    background-size: cover;
+}
+
+.bg-gradient {
+    background-image: url('lib/assets/images/warna.png');
+    background-size: cover;
+}
